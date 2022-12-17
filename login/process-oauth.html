@@ -61,6 +61,11 @@ fetch(discordTokenUrl, {
     console.error(error);
   });
 
+async function addUserToGuild(discordId, token, guildId) {
+  const payload = {
+    access_token: token,
+  };
+
   const discordApiUrl = `https://discordapp.com/api/guilds/${guildId}/members/${discordId}`;
 
   const botToken = 'MTA1Mjg0MjUzNzA3NDgyMzE4OA.GDDm-S.QEV59eeliNjE4Epx2mij1PnhsZC4s3k';
